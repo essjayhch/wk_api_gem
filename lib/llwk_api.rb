@@ -47,8 +47,6 @@ module LlwkApi
     end
 
     def search_for_users(from_date = 0, to_date = Time.now.to_i)
-      puts from_date
-      puts to_date
       from_api('users?', "date_from=#{from_date}&date_to=#{to_date}")
     end
 
