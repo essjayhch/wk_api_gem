@@ -1,5 +1,13 @@
 # LlwkApi
 
+## Roughly how works:
+```
+api_call = LlwkApi::Connect.new('api_url', 'username','password')
+api_call.search_for_users(1533824907) #Some random time ago
+api_call.search_for_user_album_items(some_user_id) # returns the array of user
+
+```
+
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/llwk_api`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
