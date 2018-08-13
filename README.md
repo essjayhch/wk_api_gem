@@ -1,23 +1,19 @@
-# LlwkApi
+# LL::WK::Api
 
 ## Roughly how works:
 ```
-api_call = LlwkApi::Connect.new('api_url', 'username','password')
+require 'll_wk_api'
+api_call = LL::WK::API.connect(url: 'api_url', username: 'username', password: 'password')
 api_call.search_for_users(1533824907) #Some random time ago
 api_call.search_for_user_album_items(some_user_id) # returns the array of user
 
 ```
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/llwk_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'llwk_api'
+gem 'll_wk_api'
 ```
 
 And then execute:
@@ -26,7 +22,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install llwk_api
+    $ gem install ll_wk_api
 
 ## Usage
 
@@ -40,7 +36,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/llwk_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/ll_wk_api. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -48,4 +44,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the LlwkApi project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/llwk_api/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the LL::WK::API project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/ll_wk_api/blob/master/CODE_OF_CONDUCT.md).
