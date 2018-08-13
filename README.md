@@ -3,9 +3,16 @@
 ## Roughly how works:
 ```
 require 'll_wk_api'
-api_call = LL::WK::API.connect(url: 'api_url', username: 'username', password: 'password')
-api_call.search_for_users(1533824907) #Some random time ago
-api_call.search_for_user_album_items(some_user_id) # returns the array of user
+api = LL::WK::API.connect(url: 'api_url', username: 'username', password: 'password')
+context = { date_from: Time.now.to_i -7200
+  date_to: Time.now.to_i,
+  per_page: 1000
+}
+api.from_api('users', context) do |u|
+  puts u['id']
+end
+api.search_for_users(1533824907) #Some random time ago
+api.search_for_user_album_items(some_user_id) # returns the array of user
 
 ```
 ## Installation

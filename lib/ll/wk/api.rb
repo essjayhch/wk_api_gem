@@ -5,7 +5,7 @@ module LL
     module API
       module_function
       def self.connect(url:, email:, password:)
-        Connection.new(url, email, password)
+        API::Connection.factory(url: url, email: email, password: password)
       end
     end
   end
